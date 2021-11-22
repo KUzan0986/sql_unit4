@@ -1,0 +1,9 @@
+INSERT INTO albom(name_albom, realised)
+VALUES ('The Silver Scream 2: Welcome to Horrorwood',2021),
+('Жаль нет ружья',2002),
+('Животный мир',2012),
+('YAMAKASI',2020),
+('MOON FLAME',2018),
+('Льдинкой по стеклу',2002),
+('Юность',2020),
+('Основано на реальных событиях',2012);

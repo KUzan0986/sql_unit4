@@ -1,0 +1,5 @@
+INSERT INTO division(name_division)
+VALUES ('Начальство'),
+('Бухгалтерия'),
+('Склад'),
+('Торговый зал');

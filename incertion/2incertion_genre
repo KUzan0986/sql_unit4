@@ -1,0 +1,6 @@
+INSERT INTO genre(name_genre)
+VALUES('Рок'),
+('Реп'),
+('Металкор'),
+('Панк'),
+('Поп');

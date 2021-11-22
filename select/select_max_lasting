@@ -1,0 +1,1 @@
+SELECT song_name, lasting_sec FROM song ORDER BY lasting_sec DESC LIMIT 1;

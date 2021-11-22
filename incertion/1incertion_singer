@@ -1,0 +1,9 @@
+INSERT INTO singer(name_singer)
+VALUES ('Ice nine kills'),
+('Король и шут'),
+('Miyagi & Andy Panda'),
+('Макс корж'),
+('Andro'),
+('Группа Стекловата'),
+('DaBro'),
+('Stigmata');
