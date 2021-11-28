@@ -1,1 +1,3 @@
-SELECT name_albom FROM albom WHERE realised = 2018;
+SELECT name_albom
+FROM albom
+WHERE realised = 2018;

@@ -1,1 +1,3 @@
-SELECT name_singer FROM singer WHERE name_singer NOT LIKE '%% %%';
+SELECT name_singer
+FROM singer
+WHERE name_singer NOT LIKE '%% %%';

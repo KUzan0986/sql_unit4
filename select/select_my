@@ -1,1 +1,3 @@
-SELECT song_name FROM song WHERE song_name ILIKE '%%my%%' OR song_name ILIKE '%%мой%%';
+SELECT song_name
+FROM song
+WHERE song_name ILIKE '%%my%%' OR song_name ILIKE '%%мой%%';

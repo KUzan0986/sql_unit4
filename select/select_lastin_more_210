@@ -1,1 +1,3 @@
-SELECT song_name, lasting_sec FROM song WHERE lasting_sec>=210;
+SELECT song_name, lasting_sec
+FROM song
+WHERE lasting_sec>=210;

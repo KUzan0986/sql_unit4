@@ -1,28 +1,34 @@
 import sqlalchemy
 import psycopg2
 import os
+from pprint import pprint
+
+
+def _file_reader(file_name):
+    with open(file_name, encoding="utf-8") as f:
+        stri = f.readline()
+        stri_res = ""
+        while stri:
+            stri_res = stri_res + stri
+            stri = f.readline()
+        return stri_res
+
 
 class Conection:
     def __init__(self):
         self.connection = sqlalchemy.create_engine('postgresql://sqluser:12345@localhost:5432/sqltask_db').connect()
 
     def incer(self):
-
         path = os.getcwd() + "\\incertion"
         file_list = os.listdir(path)
         path = path + "\\"
         for file in file_list:
             file_name = path + file
-            with open(file_name, encoding="utf-8") as f:
-                stri = f.readline()
-                stri_res = ""
-                while stri:
-                    stri_res = stri_res + stri
-                    stri = f.readline()
+            stri_res = _file_reader(file_name)
             try:
                 self.connection.execute(stri_res)
                 print(f"{path + file} Успешно загружено")
-            except BaseException: #не знаю какое исключение поставить, здесь должно быть на ошибку уникальности
+            except BaseException:  # не знаю какое исключение поставить, здесь должно быть на ошибку уникальности
                 print(f"При вставке {path + file} произошла ошибка")
 
     def select(self):
@@ -57,7 +63,7 @@ class Conection:
                 case _:
                     print("Вы ввели не то!")
 
-        with open(path, encoding="utf-8") as f:
-            result = self.connection.execute(f.readline()).fetchall()
-        print(result)
-#connection.execute("SELECT * FROM database;").fetchmany(10)
+        stri_res = _file_reader(path)
+        result = self.connection.execute(stri_res).fetchall()
+        pprint(result)
+
